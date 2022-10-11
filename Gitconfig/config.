@@ -1,5 +1,0 @@
-# config for merge
-[merge "git-crypt"]
-	name =  merge driver used to merge git-crypted files.
-	driver = $HOME/bin/merge-tool.sh %O %A %B
-	recursive = binary
