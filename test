@@ -3,7 +3,6 @@ echo *****************Start*****************
 date
 # commit id
 sha1=`git rev-parse HEAD`
-
 name=`git show $sha1 | grep 'Author:' | cut -d' ' -f2`
 email=`git show $sha1 | grep 'Author:' | cut -d' ' -f3 | sed -e 's/<//g' | sed -e 's/>//g'`
 echo 'list:'
@@ -14,7 +13,6 @@ git config --global user.email $email
 echo '***************** git checkout develop & git pull:'
 git checkout develop
 git pull
-
 echo '***************** git merge origin/master:'
 conflict=`git merge origin/master`
 echo $conflict | grep 'CONFLICT'
